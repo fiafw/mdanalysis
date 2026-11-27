@@ -42,6 +42,10 @@ Kemudian 0 (System)
     awk '!/^[#@]/ {print $1, $2}' hbnum_BZEM.xvg > hbnum_col1.xvg
     gmx analyze -f hbnum_col1.xvg -dist hbdist_BZEM.xvg -bw 1
 
-13. DSSP
+# DSSP
+      gmx dssp -s md_1.tpr -f md_500ns_center.xtc -sel Protein -o BZEM_dssp.dat
+
+Python script
     
-14. Free Energy Landscape (FEL) based RMSD and RoG
+    
+15. Free Energy Landscape (FEL) based RMSD and RoG
