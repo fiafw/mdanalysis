@@ -1,18 +1,19 @@
-# MD trajectory analysis
+# Post-MD Analysis
 
 # Menggabung files: 
 > gmx **trjcat** -f md_1.xtc md_2.xtc -o md_500ns.xtc -settime
 * Frame pertama tulis: 0
-Frame kedua: 250000
+* Frame kedua: 250000
 
-Recentering protein: 
+# Recentering protein: 
 > gmx **trjconv** -s md_1.tpr -f md_500ns.xtc -o md_500ns_center.xtc -center -pbc mol -ur compact
 Pilih 1 (Protein)
 Kemudian 0 (System)
 
-1. RMSD
-   Generating RMSD Backbone: gmx rms -s md_1.tpr -f md_500ns_center_xtc -o rmsd_backbone.xvg -tu ns (Pilih 4, lalu 4)
-   Generating RMSD Ligand: gmx rms -s md_1.tpr -f md_500ns_center_xtc -o rmsd_ligand.xvg -tu ns (Pilih 13, lalu 13)
+# Analisis Trajektori 
+# RMSD
+   Generating RMSD Backbone:  > gmx rms -s md_1.tpr -f md_500ns_center_xtc -o rmsd_backbone.xvg -tu ns (Pilih 4, lalu 4)
+   Generating RMSD Ligand: > gmx rms -s md_1.tpr -f md_500ns_center_xtc -o rmsd_ligand.xvg -tu ns (Pilih 13, lalu 13)
 
    Plot Probability Distribution Function (PDF): gmx analyze -f rmsd_backbone.xvg -dist rmsd_backbone_pdf.xvg -bw 0.01
    
