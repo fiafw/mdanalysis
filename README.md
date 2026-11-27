@@ -1,7 +1,7 @@
-# md trajectory analysis
+# MD trajectory analysis
 
 # Menggabung files: 
-> gmx **trjcat** -f md_1.xtc md_2.xtc -o md_500ns.xtc -settime
+> gmx **trjcat** -f md_1.xtc md_2.xtc -o md_500ns.xtc -settime <
 Frame pertama tulis: 0
 Frame kedua: 250000
 
