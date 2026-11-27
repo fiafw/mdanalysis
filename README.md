@@ -1,7 +1,8 @@
 # mdanalysis
 Analysis MD Result 
 
-Menggabung files: gmx trjcat -f md_1.xtc md_2.xtc -o md_500ns.xtc -settime
+Menggabung files: 
+> gmx trjcat -f md_1.xtc md_2.xtc -o md_500ns.xtc -settime
 > 0
 > 250000
 
