@@ -27,7 +27,8 @@ Kemudian 0 (System)
 # Radius of Gyration (RoG)
     gmx gyrate -s md.tpr -f md_center.trr -o RoG.xvg 
  PDF Plot:   
-    gmx analyze -f gyrate.xvg -dist rg_pdf.xvg -bw 0.1
+       
+      gmx analyze -f gyrate.xvg -dist rg_pdf.xvg -bw 0.1
    
 # Solvent Accessible Surface Area (SASA)
     gmx sasa -s md.tpr -f md_center.trr -o Backbone.xvg -tu ns
