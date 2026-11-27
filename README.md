@@ -2,13 +2,14 @@
 Analysis MD Result 
 
 Menggabung files: 
-> gmx trjcat -f md_1.xtc md_2.xtc -o md_500ns.xtc -settime
-> 0
-> 250000
+> gmx **trjcat** -f md_1.xtc md_2.xtc -o md_500ns.xtc -settime
+Frame pertama tulis: 0
+Frame kedua: 250000
 
-Recentering protein: gmx trjconv -s md_1.tpr -f md_500ns.xtc -o md_500ns_center.xtc -center -pbc mol -ur compact
-> 1 (Protein)
-> 0 (System)
+Recentering protein: 
+> gmx **trjconv** -s md_1.tpr -f md_500ns.xtc -o md_500ns_center.xtc -center -pbc mol -ur compact
+Pilih 1 (Protein)
+Kemudian 0 (System)
 
 1. RMSD
    Generating RMSD Backbone: gmx rms -s md_1.tpr -f md_500ns_center_xtc -o rmsd_backbone.xvg -tu ns (Pilih 4, lalu 4)
