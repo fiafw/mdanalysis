@@ -17,21 +17,22 @@ Kemudian 0 (System)
 
    Plot Probability Distribution Function (PDF): gmx analyze -f rmsd_backbone.xvg -dist rmsd_backbone_pdf.xvg -bw 0.01
    
-3. RMSF
-    Generating RMSF Backbone: gmx rmsf -s md_1.tpr -f md_500ns_center_xtc -o rmsf_backbone.xvg -res (Pilih 4)
-    gmx analyze -f rmsf.xvg -dist rmsf_pdf.xvg -bw 0.1
+# RMSF
+  > gmx rmsf -s md_1.tpr -f md_500ns_center_xtc -o rmsf_backbone.xvg -res (Pilih 4)
+>  gmx analyze -f rmsf.xvg -dist rmsf_pdf.xvg -bw 0.1
    
-5. RoG
-   gmx gyrate -s md.tpr -f md_center.trr -o RoG.xvg 
-   gmx analyze -f gyrate.xvg -dist rg_pdf.xvg -bw 0.1
-7. SASA
-   gmx sasa -s md.tpr -f md_center.trr -o Backbone.xvg -tu ns
+# Radius of Gyration (RoG)
+ >  gmx gyrate -s md.tpr -f md_center.trr -o RoG.xvg 
+ >  gmx analyze -f gyrate.xvg -dist rg_pdf.xvg -bw 0.1
+   
+# Solvent Accessible Surface Area (SASA)
+  >  gmx sasa -s md.tpr -f md_center.trr -o Backbone.xvg -tu ns
    gmx analyze -f sasa.xvg -dist sasa_pdf.xvg -bw 1
 
-9. Hydrogen bond
-   gmx hbond -s md_1.tpr -f md_500ns_center.xvg -num hbond.xvg -tu ns
+# Hydrogen bond
+  > gmx hbond -s md_1.tpr -f md_500ns_center.xvg -num hbond.xvg -tu ns
 
-11. Hydrogen bond (alternatif)
+# Hydrogen bond (alternative)
     gmx hbond-legacy -s md_1.tpr -f md_500ns_center.xvg -num hbond.xvg -tu ns
 
     Print PDF hbond:
