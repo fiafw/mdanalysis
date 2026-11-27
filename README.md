@@ -49,5 +49,8 @@ Kemudian 0 (System)
 
 Python script
     
-    
-15. Free Energy Landscape (FEL) based RMSD and RoG
+# Free Energy Landscape (FEL) based RMSD and RoG
+
+      echo 4 4 | gmx covar -s md_1.tpr -f md_500ns_center.xtc -n index.ndx -o eigenval.xvg -v eigenvec.trr -xpma covar.xpm
+      echo 4 4 | gmx anaeig -s md_1.tpr -f md_500ns_center.xtc -n index.ndx -v eigenvec.trr -first 1 -last 2 -2d 2dproj_12.xvg
+      python fel_3d.py
